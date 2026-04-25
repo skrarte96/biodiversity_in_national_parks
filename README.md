@@ -58,13 +58,13 @@ biodiversity-national-parks/
 ### 1. Data Loading & Exploration
 Initial inspection of both datasets: shape, data types, missing values, and unique value distributions. Key finding: **96.7% of species (5,633 out of 5,824) have no recorded conservation status** — treated as *No Concern* throughout the analysis, not as missing data.
 
-![Number of Species per Category](images/Number of Species per Category.png)
+![Number of Species per Category](images/Number_of_Species_per_Category.png)
 
 ### 2. Conservation Status Analysis
 Feature engineering: creation of `conservation_status_clean` (NaN → *No Concern*) and `is_protected` (boolean flag). Analysis of protection rates by taxonomic category, both in absolute terms and as proportions.
 
-![Rate of Protected Species per Category](images/Rate of Protected Species per Category.png)
-![Conservation Risk Profile Heatmap](images/Conservation Risk Profile Heatmap.png)
+![Rate of Protected Species per Category](images/Rate_of_Protected_Species_per_Category.png)
+![Conservation Risk Profile Heatmap](images/Conservation_Risk_Profile_Heatmap.png)
 
 ### 3. Statistical Significance Testing
 **Chi-square test of independence** to determine whether taxonomic category and conservation status are statistically related. **Cramér's V** computed as a measure of effect size.
@@ -81,9 +81,9 @@ The result is highly significant — taxonomic category and protection status ar
 ### 4. Species Observations Across Parks
 Merge of both datasets on `scientific_name` (inner join, zero data loss verified). Analysis of observation volume by park, by species (top 10), and by taxonomic category.
 
-![Number of Observations per Park](images/Number of Observations per Park.png)
-![10 Most Observed Species](images/10 Most Observed Species.png)
-![Observations per Taxonomic Category](images/Observations per Taxonomic Category.png)
+![Number of Observations per Park](images/Number_of_Observations_per_Park.png)
+![10 Most Observed Species](images/10_Most_Observed_Species.png)
+![Observations per Taxonomic Category](images/Observations_per_Taxonomic_Category.png)
 
 ---
 
